@@ -22,7 +22,9 @@ CREATE TABLE "event" (
     "location" varchar(60) NOT NULL,
     "date" varchar(60) NOT NULL,
     "picture" TEXT NOT NULL,
-    "creator" INT REFERENCES "user"(id)
+    "creator" INT REFERENCES "user"(id),
+    "createdAt" date NOT NULL DEFAULT DATE( NOW() ),
+    "updatedAt" date NOT NULL DEFAULT DATE( NOW() )
 );
 
 

@@ -24,7 +24,7 @@ const resolvers = {
             return Interest.findAll()
         },
         async searchInterest(root, { title }, { models }) {
-            return Interest.findAll({ where: { title: db.where(db.fn('LOWER', db.col('title')), 'LIKE', title.toLowerCase() + '%') } })
+            return Interest.findAll({ where: { title: db.where(db.fn('LOWER', db.col('title')), 'LIKE', title.toLowerCase() + '%') }, limit: 5 })
         },
         async event(root, { id }) {
             return Event.findByPk(id);

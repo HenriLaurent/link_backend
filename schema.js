@@ -2,6 +2,8 @@ const {gql} = require('apollo-server-express');
 
 const typeDefs = gql` 
 
+scalar Date
+
 type User {
     id: ID!
     google_id:String!
@@ -41,6 +43,8 @@ type Event {
     date:String!
     picture:String!
     creator:String!
+    createdAt: Date!
+    updatedAt: Date!
     users:[User]
 
 }

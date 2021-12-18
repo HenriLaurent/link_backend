@@ -15,7 +15,7 @@ const Event = db.define('Event', {
   db,
   modelName: 'Event',
   tableName: "event",
-  timestamps: false,
+  timestamps: true,
 });
 
 
